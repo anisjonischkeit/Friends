@@ -139,7 +139,7 @@ class MasterViewController: UITableViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
-        if segue.identifier == "showDetail" || segue.identifier == "showImage" {
+        if segue.identifier == "showDetail" {
             if let dvc = segue.destinationViewController as? DetailViewController
             {
 //                dvc.delegate = self

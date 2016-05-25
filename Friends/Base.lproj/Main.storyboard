@@ -73,11 +73,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dV2-AI-5aw">
-                                <rect key="frame" x="174" y="72" width="406" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aFX-jR-1ut">
                                 <rect key="frame" x="20" y="72" width="146" height="30"/>
                                 <constraints>
@@ -86,6 +81,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dV2-AI-5aw">
+                                <rect key="frame" x="174" y="72" width="406" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I8I-cQ-2Ne">
+                                <rect key="frame" x="20" y="110" width="30" height="30"/>
+                                <state key="normal" title="Map"/>
+                                <connections>
+                                    <segue destination="n9J-0j-3MR" kind="show" identifier="showMap" id="RId-9L-BO0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -104,6 +111,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YJI-Wi-gDu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1706" y="-926"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="AkH-HB-WEV">
+            <objects>
+                <viewController id="n9J-0j-3MR" customClass="MapViewController" customModule="Friends" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JEe-bW-jCI"/>
+                        <viewControllerLayoutGuide type="bottom" id="MxF-oT-4jv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mrO-ze-iuZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="D11-wB-7aZ">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </mapView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WL9-NF-Vgw">
+                                <rect key="frame" x="20" y="72" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WL9-NF-Vgw" firstAttribute="leading" secondItem="mrO-ze-iuZ" secondAttribute="leadingMargin" id="KhT-2D-NYF"/>
+                            <constraint firstItem="WL9-NF-Vgw" firstAttribute="centerX" secondItem="D11-wB-7aZ" secondAttribute="centerX" id="OLc-xR-dyb"/>
+                            <constraint firstAttribute="trailing" secondItem="D11-wB-7aZ" secondAttribute="trailing" id="eoB-fj-Ql8"/>
+                            <constraint firstItem="D11-wB-7aZ" firstAttribute="leading" secondItem="mrO-ze-iuZ" secondAttribute="leading" id="fDm-hj-MeC"/>
+                            <constraint firstItem="WL9-NF-Vgw" firstAttribute="top" secondItem="JEe-bW-jCI" secondAttribute="bottom" constant="8" symbolic="YES" id="jaK-VW-7g6"/>
+                            <constraint firstItem="D11-wB-7aZ" firstAttribute="top" secondItem="JEe-bW-jCI" secondAttribute="bottom" id="n4H-cu-dlh"/>
+                            <constraint firstItem="D11-wB-7aZ" firstAttribute="bottom" secondItem="MxF-oT-4jv" secondAttribute="top" id="xLf-6U-joh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="D11-wB-7aZ" id="8vY-J3-QZp"/>
+                        <outlet property="textField" destination="WL9-NF-Vgw" id="YAm-00-9af"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ilr-h0-Skv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2412" y="-1625"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Pc6-Fh-JR6">

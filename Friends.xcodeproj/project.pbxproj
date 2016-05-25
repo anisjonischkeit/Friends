@@ -18,6 +18,7 @@
 		88F678AD1CF40ADD00C00F39 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F678AC1CF40ADD00C00F39 /* Friend.swift */; };
 		88F678AF1CF40AFC00C00F39 /* FriendList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F678AE1CF40AFC00C00F39 /* FriendList.swift */; };
 		88F678B11CF41DDE00C00F39 /* apple-touch-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 88F678B01CF41DDE00C00F39 /* apple-touch-icon.png */; };
+		88F678B51CF5454100C00F39 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F678B41CF5454100C00F39 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		88F678AC1CF40ADD00C00F39 /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		88F678AE1CF40AFC00C00F39 /* FriendList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendList.swift; sourceTree = "<group>"; };
 		88F678B01CF41DDE00C00F39 /* apple-touch-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "apple-touch-icon.png"; sourceTree = "<group>"; };
+		88F678B41CF5454100C00F39 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = ../MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			children = (
 				88F678A81CF406C200C00F39 /* MasterViewController.swift */,
 				88F6787C1CF4036900C00F39 /* DetailViewController.swift */,
+				88F678B41CF5454100C00F39 /* MapViewController.swift */,
 				88F6787E1CF4036900C00F39 /* Main.storyboard */,
 				88F678AC1CF40ADD00C00F39 /* Friend.swift */,
 				88F678AE1CF40AFC00C00F39 /* FriendList.swift */,
@@ -270,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88F678A91CF406C200C00F39 /* MasterViewController.swift in Sources */,
+				88F678B51CF5454100C00F39 /* MapViewController.swift in Sources */,
 				88F678AF1CF40AFC00C00F39 /* FriendList.swift in Sources */,
 				88F6787D1CF4036900C00F39 /* DetailViewController.swift in Sources */,
 				88F6787B1CF4036900C00F39 /* AppDelegate.swift in Sources */,
@@ -500,6 +504,7 @@
 				88F678A11CF4036A00C00F39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		88F678A21CF4036A00C00F39 /* Build configuration list for PBXNativeTarget "FriendsTests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +513,7 @@
 				88F678A41CF4036A00C00F39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		88F678A51CF4036A00C00F39 /* Build configuration list for PBXNativeTarget "FriendsUITests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +522,7 @@
 				88F678A71CF4036A00C00F39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
