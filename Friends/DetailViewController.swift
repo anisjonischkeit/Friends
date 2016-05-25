@@ -12,11 +12,18 @@ protocol DetailViewControllerDelegate {
     
 }
 
-class DetailViewController: UITableViewController {
+class DetailViewController: UITableViewController, WebViewControllerDelegate, MapViewControllerDelegate {
     
     @IBOutlet weak var fnText: UITextField!
     @IBOutlet weak var lnText: UITextField!
     @IBOutlet weak var addressText: UILabel!
+    
+    @IBOutlet weak var webText: UILabel!
+    @IBOutlet weak var flikrText: UILabel!
+    @IBOutlet weak var facebookText: UILabel!
+    
+    @IBOutlet weak var pictureText: UITextField!
+    @IBOutlet weak var image: UIImageView!
     
     var delegate : DetailViewControllerDelegate!
     var friend : Friend!
@@ -32,7 +39,18 @@ class DetailViewController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         fnText.text = friend.firstName
         lnText.text = friend.lastName
-        addressText.text = friend.address
+        if friend.address != "" { addressText.text = friend.address }
+        
+        facebookText.text = friend.facebook
+        flikrText.text = friend.flikr
+        webText.text = friend.website
+        
+        pictureText.text = friend.photoUrl
+//        if friend.photoData != nil{
+//            image.image = UIImage(data: friend.photoData!)
+//        }
+        
+        self.tableView.reloadData()
         
     }
 
@@ -51,11 +69,27 @@ class DetailViewController: UITableViewController {
         if segue.identifier == "showMap" {
             if let dvc = segue.destinationViewController as? MapViewController
             {
-//                dvc.delegate = self
+                dvc.delegate = self
+                dvc.friend = friend
+            }
+        } else if segue.identifier == "showWebsite" {
+            if let dvc = segue.destinationViewController as? WebViewController
+            {
+                dvc.delegate = self
                 dvc.friend = friend
             }
         }
         
+    }
+    
+    func save(friend : Friend) {
+//        friend = self.friend
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        friend.firstName = fnText.text!
+        friend.lastName = lnText.text!
+        friend.photoUrl = pictureText.text!
     }
 
 }

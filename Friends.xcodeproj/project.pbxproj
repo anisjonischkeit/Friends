@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8843B4B81CF595C8004CF7D0 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8843B4B71CF595C8004CF7D0 /* WebViewController.swift */; };
+		8843B4BA1CF5A9DF004CF7D0 /* FriendExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8843B4B91CF5A9DF004CF7D0 /* FriendExtension.swift */; };
 		88F6787B1CF4036900C00F39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F6787A1CF4036900C00F39 /* AppDelegate.swift */; };
 		88F6787D1CF4036900C00F39 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F6787C1CF4036900C00F39 /* DetailViewController.swift */; };
 		88F678801CF4036900C00F39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88F6787E1CF4036900C00F39 /* Main.storyboard */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8843B4B71CF595C8004CF7D0 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		8843B4B91CF5A9DF004CF7D0 /* FriendExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendExtension.swift; sourceTree = "<group>"; };
 		88F678771CF4036900C00F39 /* Friends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Friends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88F6787A1CF4036900C00F39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88F6787C1CF4036900C00F39 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +114,7 @@
 				88F678A81CF406C200C00F39 /* MasterViewController.swift */,
 				88F6787C1CF4036900C00F39 /* DetailViewController.swift */,
 				88F678B41CF5454100C00F39 /* MapViewController.swift */,
+				8843B4B71CF595C8004CF7D0 /* WebViewController.swift */,
 				88F6787E1CF4036900C00F39 /* Main.storyboard */,
 				88F678AC1CF40ADD00C00F39 /* Friend.swift */,
 				88F678AE1CF40AFC00C00F39 /* FriendList.swift */,
@@ -118,6 +123,7 @@
 				88F678811CF4036900C00F39 /* Assets.xcassets */,
 				88F678831CF4036900C00F39 /* LaunchScreen.storyboard */,
 				88F678861CF4036900C00F39 /* Info.plist */,
+				8843B4B91CF5A9DF004CF7D0 /* FriendExtension.swift */,
 			);
 			path = Friends;
 			sourceTree = "<group>";
@@ -276,6 +282,8 @@
 				88F678B51CF5454100C00F39 /* MapViewController.swift in Sources */,
 				88F678AF1CF40AFC00C00F39 /* FriendList.swift in Sources */,
 				88F6787D1CF4036900C00F39 /* DetailViewController.swift in Sources */,
+				8843B4B81CF595C8004CF7D0 /* WebViewController.swift in Sources */,
+				8843B4BA1CF5A9DF004CF7D0 /* FriendExtension.swift in Sources */,
 				88F6787B1CF4036900C00F39 /* AppDelegate.swift in Sources */,
 				88F678AD1CF40ADD00C00F39 /* Friend.swift in Sources */,
 			);

@@ -9,11 +9,16 @@
 import UIKit
 import MapKit
 
+protocol MapViewControllerDelegate {
+//    func save(friend : Friend)
+}
+
 class MapViewController: UIViewController {
 
     @IBOutlet var textField: UITextField!
     @IBOutlet weak var mapView: MKMapView!
     
+    var delegate : MapViewControllerDelegate!
     var friend : Friend!
     
     override func viewDidLoad() {
@@ -42,5 +47,9 @@ class MapViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func viewWillDisappear(animated: Bool) {
+        friend.address = textField.text!
+    }
 
 }
