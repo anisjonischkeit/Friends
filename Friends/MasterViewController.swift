@@ -49,7 +49,7 @@ class MasterViewController: UITableViewController {
     }
     
     func insertNewObject(sender: AnyObject) {
-        friend = Friend(firstName: "", lastName: "", address: "", flikr: "", website: "", photoUrl: "")
+        friend = Friend(firstName: "", lastName: "", address: "", facebook: "", flikr: "", website: "", photoUrl: "")
         friendList.entries.append(friend)
 //        self.tableView.reloadData()
         performSegueWithIdentifier("showDetail", sender: self)
