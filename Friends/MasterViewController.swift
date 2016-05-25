@@ -11,13 +11,19 @@ import UIKit
 let documentsDirectory = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as NSString
 let fileName = documentsDirectory.stringByAppendingPathComponent("photos.plist")
 
-class MasterViewController: UITableViewController {
+class MasterViewController: UITableViewController, DetailViewControllerDelegate {
 
     var friendList = FriendList()
     var friend : Friend!
     var firstLoad : Bool = true
     
     override func viewWillAppear(animated: Bool) {
+        
+        for (i, element) in friendList.entries.enumerate() { //loops through all contacts with i as the index and element as the array item
+            if(element.fullName().stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()) == "") && element.photoData == nil {// checks if first, middle, or last name have been entered
+                friendList.entries.removeAtIndex(i) //if not, the item is removed (used to remove invalid contacts)
+            }
+        }
         
         //makes sure it only gets triggered when the app is loading not when coming back to the master view from the detail view
         if firstLoad == true {
@@ -86,6 +92,10 @@ class MasterViewController: UITableViewController {
     func saveToFile() {
         let propertyList: NSArray = friendList.entries.map{ $0.propertyListRepresentation() }
         propertyList.writeToFile(fileName, atomically: true)
+    }
+    
+    func detailViewDidChange() {
+        self.tableView.reloadData()
     }
     
     
@@ -173,7 +183,7 @@ class MasterViewController: UITableViewController {
                 if let indexPath = self.tableView.indexPathForSelectedRow {
                     friend = friendList.entries[indexPath.row]// as ContactListEntry //selects the selected contact
                 }
-//                dvc.delegate = self
+                dvc.delegate = self
                 dvc.friend = friend
             }
         }

@@ -9,10 +9,10 @@
 import UIKit
 
 protocol DetailViewControllerDelegate {
-    
+    func detailViewDidChange()
 }
 
-class DetailViewController: UITableViewController, WebViewControllerDelegate, MapViewControllerDelegate {
+class DetailViewController: UITableViewController, UITextFieldDelegate, WebViewControllerDelegate, MapViewControllerDelegate {
     
     @IBOutlet weak var fnText: UITextField!
     @IBOutlet weak var lnText: UITextField!
@@ -46,10 +46,10 @@ class DetailViewController: UITableViewController, WebViewControllerDelegate, Ma
         webText.text = friend.website
         
         pictureText.text = friend.photoUrl
-//        if friend.photoData != nil{
-//            image.image = UIImage(data: friend.photoData!)
-//        }
-        
+        if friend.photoData != nil{
+            image.image = UIImage(data: friend.photoData!)
+        }
+    
         self.tableView.reloadData()
         
     }
@@ -58,6 +58,46 @@ class DetailViewController: UITableViewController, WebViewControllerDelegate, Ma
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func save(friend : Friend) {
+        //        friend = self.friend
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        loadImage()
+        self.delegate.detailViewDidChange()
+        return true
+    }
+    
+    func loadImage() {
+        let urlName = pictureText.text!
+        if let url = NSURL(string: urlName) {
+            let queue2 = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0)
+            
+            dispatch_async(queue2, {
+                if let data = NSData(contentsOfURL: url),
+                    let image = UIImage(data: data) {
+                    
+                    let mainQueue2 = dispatch_get_main_queue()
+                    dispatch_async(mainQueue2, {
+                        self.image.image = image
+                        self.friend.photoData = data
+                        
+                    })
+                }
+            })
+        }
+        
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        friend.firstName = fnText.text!
+        friend.lastName = lnText.text!
+        friend.photoUrl = pictureText.text!
+        loadImage()
+        self.delegate.detailViewDidChange()
+    }
+
     
     // MARK: - Navigation
     
@@ -82,15 +122,6 @@ class DetailViewController: UITableViewController, WebViewControllerDelegate, Ma
         
     }
     
-    func save(friend : Friend) {
-//        friend = self.friend
-    }
     
-    override func viewWillDisappear(animated: Bool) {
-        friend.firstName = fnText.text!
-        friend.lastName = lnText.text!
-        friend.photoUrl = pictureText.text!
-    }
-
 }
 
