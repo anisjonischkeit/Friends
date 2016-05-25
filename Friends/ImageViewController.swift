@@ -1,5 +1,5 @@
 //
-//  MapViewController.swift
+//  ImageViewController.swift
 //  Friends
 //
 //  Created by Anis on 25/05/2016.
@@ -7,26 +7,21 @@
 //
 
 import UIKit
-import MapKit
-import CoreLocation
 
-protocol MapViewControllerDelegate {
-//    func save(friend : Friend)
+protocol ImageViewControllerDelegate {
+    func getNextImage (dvc : ImageViewController, photoId: Int)
 }
 
-class MapViewController: UIViewController {
+class ImageViewController: UIViewController {
 
-    @IBOutlet var textField: UITextField!
-    @IBOutlet weak var mapView: MKMapView!
+    var delegate : ImageViewControllerDelegate!
+    var photo : FlickrPhoto!
+    var photoCount: Int = 0
     
-    var delegate : MapViewControllerDelegate!
-    var friend : Friend!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        textField.text = friend.address
-        loadMap()
+
         // Do any additional setup after loading the view.
     }
 
@@ -35,10 +30,7 @@ class MapViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func loadMap() {
-        
-    }
-    
+
     /*
     // MARK: - Navigation
 
@@ -48,9 +40,5 @@ class MapViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
-    override func viewWillDisappear(animated: Bool) {
-        friend.address = textField.text!
-    }
 
 }

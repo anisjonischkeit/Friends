@@ -20,7 +20,7 @@ class MasterViewController: UITableViewController, DetailViewControllerDelegate 
     override func viewWillAppear(animated: Bool) {
         
         for (i, element) in friendList.entries.enumerate() { //loops through all contacts with i as the index and element as the array item
-            if(element.fullName().stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()) == "") && element.photoData == nil {// checks if first, middle, or last name have been entered
+            if(element.fullName().stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()) == "") && (element.photoData == nil || element.photoUrl == "") {// checks if first, middle, or last name have been entered
                 friendList.entries.removeAtIndex(i) //if not, the item is removed (used to remove invalid contacts)
             }
         }
@@ -67,7 +67,7 @@ class MasterViewController: UITableViewController, DetailViewControllerDelegate 
     }
     
     func insertNewObject(sender: AnyObject) {
-        friend = Friend(firstName: "", lastName: "", address: "", facebook: "", flikr: "", website: "", photoUrl: "")
+        friend = Friend(firstName: "", lastName: "", address: "", flikr: "", website: "", photoUrl: "")
         friendList.entries.append(friend)
 //        self.tableView.reloadData()
         performSegueWithIdentifier("showDetail", sender: self)

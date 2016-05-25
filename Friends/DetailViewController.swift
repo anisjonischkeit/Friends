@@ -20,7 +20,6 @@ class DetailViewController: UITableViewController, UITextFieldDelegate, WebViewC
     
     @IBOutlet weak var webText: UILabel!
     @IBOutlet weak var flikrText: UILabel!
-    @IBOutlet weak var facebookText: UILabel!
     
     @IBOutlet weak var pictureText: UITextField!
     @IBOutlet weak var image: UIImageView!
@@ -39,9 +38,8 @@ class DetailViewController: UITableViewController, UITextFieldDelegate, WebViewC
     override func viewWillAppear(animated: Bool) {
         fnText.text = friend.firstName
         lnText.text = friend.lastName
-        if friend.address != "" { addressText.text = friend.address }
+        addressText.text = friend.address
         
-        facebookText.text = friend.facebook
         flikrText.text = friend.flikr
         webText.text = friend.website
         

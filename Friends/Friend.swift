@@ -12,17 +12,15 @@ class Friend {
     var firstName: String
     var lastName: String
     var address: String
-    var facebook: String
     var flikr: String
     var website: String
     var photoUrl: String
     var photoData: NSData?
     
-    init(firstName: String, lastName: String, address: String, facebook: String, flikr: String, website: String, photoUrl: String){ //initialising variables
+    init(firstName: String, lastName: String, address: String, flikr: String, website: String, photoUrl: String){ //initialising variables
         self.firstName = firstName
         self.lastName = lastName
         self.address = address
-        self.facebook = facebook
         self.flikr = flikr
         self.website = website
         self.photoUrl = photoUrl
