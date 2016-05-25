@@ -19,8 +19,8 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mapView = nil
-        textField.text = friend.address
+//        textField.text = friend.address
+        loadMap()
         // Do any additional setup after loading the view.
     }
 
@@ -29,7 +29,10 @@ class MapViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func loadMap() {
+        
+    }
+    
     /*
     // MARK: - Navigation
 

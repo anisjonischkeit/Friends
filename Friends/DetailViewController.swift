@@ -12,10 +12,16 @@ protocol DetailViewControllerDelegate {
     
 }
 
-class DetailViewController: UIViewController {
+class DetailViewController: UITableViewController {
     
-    @IBOutlet weak var fnText: UITextField!
-    @IBOutlet weak var lnText: UITextField!
+
+//    @IBOutlet weak var fnText: UITextField!
+    @IBOutlet weak var addressText: UILabel!
+//    @IBOutlet var socialCell: UITableViewSection!
+    @IBOutlet weak var facebookCell: UITableViewCell!
+    @IBOutlet weak var flikrCell: UITableViewCell!
+    @IBOutlet weak var webCell: UITableViewCell!
+    
     
     var delegate : DetailViewControllerDelegate!
     var friend : Friend!
@@ -24,8 +30,11 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 //        addressCell.textLabel?.text = detailItem.address
-        fnText.text = friend.firstName
-        lnText.text = friend.lastName
+        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+//        fnText.text = ""
     }
 
     override func didReceiveMemoryWarning() {
