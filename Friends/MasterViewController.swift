@@ -11,18 +11,19 @@ import UIKit
 class MasterViewController: UITableViewController {
 
     var friendList = FriendList()
+    var friend : Friend!
     
     override func viewWillAppear(animated: Bool) {
-        let friend = Friend(firstName: "first", lastName: "last", address: "address", flikr: "flikr", website: "website", photoUrl: "")
+//        let friend = Friend(firstName: "first", lastName: "last", address: "address", flikr: "flikr", website: "website", photoUrl: "")
         
-        friend.photoData = UIImagePNGRepresentation(UIImage(named: "apple-touch-icon.png")!)
+//        friend.photoData = UIImagePNGRepresentation(UIImage(named: "apple-touch-icon.png")!)
         
         for contact in friendList.entries { //loops through all contacts with i as the index and element as the array item
             
         }
 
         
-        friendList.entries.append(friend)
+//        friendList.entries.append(friend)
         self.tableView.reloadData()
     }
     
@@ -34,14 +35,29 @@ class MasterViewController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+//         self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
+        self.navigationItem.rightBarButtonItem = addButton
+        
+        let editButton = UIBarButtonItem(barButtonSystemItem: .Edit, target: self, action: "editObject:")
+        self.navigationItem.leftBarButtonItem = editButton
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func insertNewObject(sender: AnyObject) {
+        friend = Friend(firstName: "", lastName: "", address: "", flikr: "", website: "", photoUrl: "")
+        friendList.entries.append(friend)
+//        self.tableView.reloadData()
+        performSegueWithIdentifier("showDetail", sender: self)
+    }
 
+    func editObject(sender: AnyObject) {
+        
+    }
     
     
     
@@ -122,6 +138,15 @@ class MasterViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "showDetail" || segue.identifier == "showImage" {
+            if let dvc = segue.destinationViewController as? DetailViewController
+            {
+//                dvc.delegate = self
+                dvc.detailItem = friend
+            }
+        }
+        
     }
  
 

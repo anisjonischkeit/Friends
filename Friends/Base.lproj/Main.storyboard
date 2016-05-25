@@ -35,7 +35,7 @@
                                     <accessibilityTraits key="traits" image="YES"/>
                                 </accessibility>
                                 <connections>
-                                    <segue destination="6zu-St-B3i" kind="show" id="yb9-KY-Iua"/>
+                                    <segue destination="6zu-St-B3i" kind="show" identifier="showDetail" id="yb9-KY-Iua"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
