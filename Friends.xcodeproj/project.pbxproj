@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		88F6787B1CF4036900C00F39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F6787A1CF4036900C00F39 /* AppDelegate.swift */; };
-		88F6787D1CF4036900C00F39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F6787C1CF4036900C00F39 /* ViewController.swift */; };
+		88F6787D1CF4036900C00F39 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F6787C1CF4036900C00F39 /* DetailViewController.swift */; };
 		88F678801CF4036900C00F39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88F6787E1CF4036900C00F39 /* Main.storyboard */; };
 		88F678821CF4036900C00F39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88F678811CF4036900C00F39 /* Assets.xcassets */; };
 		88F678851CF4036900C00F39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88F678831CF4036900C00F39 /* LaunchScreen.storyboard */; };
 		88F678901CF4036A00C00F39 /* FriendsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F6788F1CF4036A00C00F39 /* FriendsTests.swift */; };
 		88F6789B1CF4036A00C00F39 /* FriendsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F6789A1CF4036A00C00F39 /* FriendsUITests.swift */; };
+		88F678A91CF406C200C00F39 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F678A81CF406C200C00F39 /* MasterViewController.swift */; };
+		88F678AD1CF40ADD00C00F39 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F678AC1CF40ADD00C00F39 /* Friend.swift */; };
+		88F678AF1CF40AFC00C00F39 /* FriendList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F678AE1CF40AFC00C00F39 /* FriendList.swift */; };
+		88F678B11CF41DDE00C00F39 /* apple-touch-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 88F678B01CF41DDE00C00F39 /* apple-touch-icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,7 @@
 /* Begin PBXFileReference section */
 		88F678771CF4036900C00F39 /* Friends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Friends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88F6787A1CF4036900C00F39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		88F6787C1CF4036900C00F39 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		88F6787C1CF4036900C00F39 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		88F6787F1CF4036900C00F39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		88F678811CF4036900C00F39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88F678841CF4036900C00F39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +51,10 @@
 		88F678961CF4036A00C00F39 /* FriendsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FriendsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		88F6789A1CF4036A00C00F39 /* FriendsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsUITests.swift; sourceTree = "<group>"; };
 		88F6789C1CF4036A00C00F39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88F678A81CF406C200C00F39 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		88F678AC1CF40ADD00C00F39 /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		88F678AE1CF40AFC00C00F39 /* FriendList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendList.swift; sourceTree = "<group>"; };
+		88F678B01CF41DDE00C00F39 /* apple-touch-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "apple-touch-icon.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +105,13 @@
 		88F678791CF4036900C00F39 /* Friends */ = {
 			isa = PBXGroup;
 			children = (
-				88F6787A1CF4036900C00F39 /* AppDelegate.swift */,
-				88F6787C1CF4036900C00F39 /* ViewController.swift */,
+				88F678A81CF406C200C00F39 /* MasterViewController.swift */,
+				88F6787C1CF4036900C00F39 /* DetailViewController.swift */,
 				88F6787E1CF4036900C00F39 /* Main.storyboard */,
+				88F678AC1CF40ADD00C00F39 /* Friend.swift */,
+				88F678AE1CF40AFC00C00F39 /* FriendList.swift */,
+				88F6787A1CF4036900C00F39 /* AppDelegate.swift */,
+				88F678B01CF41DDE00C00F39 /* apple-touch-icon.png */,
 				88F678811CF4036900C00F39 /* Assets.xcassets */,
 				88F678831CF4036900C00F39 /* LaunchScreen.storyboard */,
 				88F678861CF4036900C00F39 /* Info.plist */,
@@ -232,6 +244,7 @@
 				88F678851CF4036900C00F39 /* LaunchScreen.storyboard in Resources */,
 				88F678821CF4036900C00F39 /* Assets.xcassets in Resources */,
 				88F678801CF4036900C00F39 /* Main.storyboard in Resources */,
+				88F678B11CF41DDE00C00F39 /* apple-touch-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,8 +269,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88F6787D1CF4036900C00F39 /* ViewController.swift in Sources */,
+				88F678A91CF406C200C00F39 /* MasterViewController.swift in Sources */,
+				88F678AF1CF40AFC00C00F39 /* FriendList.swift in Sources */,
+				88F6787D1CF4036900C00F39 /* DetailViewController.swift in Sources */,
 				88F6787B1CF4036900C00F39 /* AppDelegate.swift in Sources */,
+				88F678AD1CF40ADD00C00F39 /* Friend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
