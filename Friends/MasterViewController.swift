@@ -143,7 +143,7 @@ class MasterViewController: UITableViewController {
             if let dvc = segue.destinationViewController as? DetailViewController
             {
 //                dvc.delegate = self
-                dvc.detailItem = friend
+                dvc.friend = friend
             }
         }
         
