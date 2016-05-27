@@ -116,8 +116,33 @@ class DetailViewController: UITableViewController, UITextFieldDelegate, WebViewC
                 dvc.delegate = self
                 dvc.friend = friend
             }
+        } else if segue.identifier == "showFlikr" {
+            if let dvc = segue.destinationViewController as? FlikrViewController
+            {
+                dvc.friend = friend
+            }
+        } else if segue.identifier == "showLogin" {
+            if let dvc = segue.destinationViewController as? LoginViewController
+            {
+                dvc.friend = friend
+            }
         }
         
+    }
+    
+    override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
+        if let ident = identifier {
+            if ident == "showFlikr" {
+                if friend.flikr == "" {
+                    performSegueWithIdentifier("showLogin", sender: self)
+                    return false
+                } else {
+//                    performSegueWithIdentifier("showFlikr", sender: self)
+                    return true
+                }
+            }
+        }
+        return true
     }
     
     

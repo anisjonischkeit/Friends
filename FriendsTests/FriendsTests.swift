@@ -33,4 +33,15 @@ class FriendsTests: XCTestCase {
         }
     }
     
+    func testCreatingURLRequest()
+    {
+        //creates a NSURLRequest
+        let urlAddress = "http://www.google.com.au"
+        if let url = NSURL(string: urlAddress)
+        {
+            let urlToBeLoaded = NSURLRequest(URL: url)
+            XCTAssertNotNil(urlToBeLoaded)
+        }
+    }
+    
 }

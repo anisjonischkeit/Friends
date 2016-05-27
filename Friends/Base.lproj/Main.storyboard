@@ -57,6 +57,39 @@
             </objects>
             <point key="canvasLocation" x="1012" y="-926"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="imO-GT-veI">
+            <objects>
+                <viewController id="PhN-S3-quG" customClass="LoginViewController" customModule="Friends" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CaQ-HE-NvE"/>
+                        <viewControllerLayoutGuide type="bottom" id="del-cD-YYV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IOx-jy-ra8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Flikr Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Ps-hW-9yb">
+                                <rect key="frame" x="20" y="72" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4Ps-hW-9yb" firstAttribute="trailing" secondItem="IOx-jy-ra8" secondAttribute="trailingMargin" id="TQp-cm-pCb"/>
+                            <constraint firstItem="4Ps-hW-9yb" firstAttribute="leading" secondItem="IOx-jy-ra8" secondAttribute="leadingMargin" id="YqQ-Zm-thC"/>
+                            <constraint firstItem="4Ps-hW-9yb" firstAttribute="top" secondItem="CaQ-HE-NvE" secondAttribute="bottom" constant="8" symbolic="YES" id="ffT-sj-Uli"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="flikrText" destination="4Ps-hW-9yb" id="jRo-4C-FO7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dNb-vv-gnI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1012" y="-136"/>
+        </scene>
         <!--Detail View Controller-->
         <scene sceneID="oC2-57-k3J">
             <objects>
@@ -253,6 +286,7 @@
                         <outlet property="lnText" destination="HCj-9E-Uhg" id="xsT-OY-laE"/>
                         <outlet property="pictureText" destination="F2k-S9-8gQ" id="FW9-iy-Nlj"/>
                         <outlet property="webText" destination="vVy-uS-inJ" id="l1X-8W-2wc"/>
+                        <segue destination="PhN-S3-quG" kind="show" identifier="showLogin" id="csw-YH-fwj"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZPT-Bf-tmf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -305,7 +339,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RPM-Yd-wJR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2408" y="-933"/>
+            <point key="canvasLocation" x="2408" y="-1629"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="AkH-HB-WEV">
@@ -346,7 +380,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ilr-h0-Skv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2412" y="-1625"/>
+            <point key="canvasLocation" x="2408" y="-926"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Pc6-Fh-JR6">
@@ -364,12 +398,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RsK-gJ-4zg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="200" y="-926"/>
+            <point key="canvasLocation" x="279" y="-926"/>
         </scene>
-        <!--Photo Collection-->
+        <!--Flikr-->
         <scene sceneID="UlE-SG-qkX">
             <objects>
-                <collectionViewController id="aJO-p0-eKd" customClass="MasterViewController" customModule="Friends" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="aJO-p0-eKd" customClass="FlikrViewController" customModule="Friends" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="s1e-Z2-fZm">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -400,7 +434,7 @@
                                     <constraint firstItem="Ase-Xz-hGc" firstAttribute="leading" secondItem="h0D-4Z-Zg6" secondAttribute="leading" id="wWh-2u-gXD"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="cellImage" destination="Ase-Xz-hGc" id="cHn-nj-G8y"/>
+                                    <outlet property="cellImage" destination="Ase-Xz-hGc" id="DQe-04-uuc"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -409,14 +443,14 @@
                             <outlet property="delegate" destination="aJO-p0-eKd" id="PUS-Hc-eb4"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Photo Collection" id="oqU-tz-l0s"/>
+                    <navigationItem key="navigationItem" title="Flikr" id="oqU-tz-l0s"/>
                     <connections>
                         <segue destination="YGD-Uz-rmy" kind="show" identifier="showImage" id="DGs-u7-0V8"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wh9-Wp-50F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1685" y="-229"/>
+            <point key="canvasLocation" x="1685" y="-136"/>
         </scene>
         <!--Image View Controller-->
         <scene sceneID="KJc-6U-lLD">
@@ -469,7 +503,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2408" y="-229"/>
+            <point key="canvasLocation" x="2408" y="-136"/>
         </scene>
     </scenes>
 </document>

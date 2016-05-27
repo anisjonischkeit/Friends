@@ -1,5 +1,5 @@
 //
-//  ImageViewController.swift
+//  LoginViewController.swift
 //  Friends
 //
 //  Created by Anis on 25/05/2016.
@@ -8,16 +8,11 @@
 
 import UIKit
 
-protocol imageViewControllerDelegate {
-    func getNextImage (dvc : ImageViewController, photoId: Int)
-}
+class LoginViewController: UIViewController {
 
-class ImageViewController: UIViewController {
-
-    var delegate : imageViewControllerDelegate!
-    var photo : UIImage!
-    var photoCount: Int = 0
+    @IBOutlet weak var flikrText: UITextField!
     
+    var friend : Friend!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +25,9 @@ class ImageViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        friend.flikr = flikrText.text!
+    }
 
     /*
     // MARK: - Navigation

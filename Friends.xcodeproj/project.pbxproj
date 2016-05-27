@@ -10,9 +10,10 @@
 		8843B4B81CF595C8004CF7D0 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8843B4B71CF595C8004CF7D0 /* WebViewController.swift */; };
 		8843B4BA1CF5A9DF004CF7D0 /* FriendExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8843B4B91CF5A9DF004CF7D0 /* FriendExtension.swift */; };
 		8843B4BE1CF5BD16004CF7D0 /* FlickrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8843B4BD1CF5BD16004CF7D0 /* FlickrAPI.swift */; };
-		8843B4C01CF5C4B8004CF7D0 /* FlikrCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8843B4BF1CF5C4B8004CF7D0 /* FlikrCell.swift */; };
 		8843B4C21CF5C4E7004CF7D0 /* FlikrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8843B4C11CF5C4E7004CF7D0 /* FlikrViewController.swift */; };
 		8843B4C41CF5C8C2004CF7D0 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8843B4C31CF5C8C2004CF7D0 /* ImageViewController.swift */; };
+		8843B4C61CF5D32F004CF7D0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8843B4C51CF5D32F004CF7D0 /* LoginViewController.swift */; };
+		8843B4C81CF5DAC6004CF7D0 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8843B4C71CF5DAC6004CF7D0 /* CollectionViewCell.swift */; };
 		88F6787B1CF4036900C00F39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F6787A1CF4036900C00F39 /* AppDelegate.swift */; };
 		88F6787D1CF4036900C00F39 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F6787C1CF4036900C00F39 /* DetailViewController.swift */; };
 		88F678801CF4036900C00F39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88F6787E1CF4036900C00F39 /* Main.storyboard */; };
@@ -47,9 +48,10 @@
 		8843B4B71CF595C8004CF7D0 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		8843B4B91CF5A9DF004CF7D0 /* FriendExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendExtension.swift; sourceTree = "<group>"; };
 		8843B4BD1CF5BD16004CF7D0 /* FlickrAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrAPI.swift; sourceTree = "<group>"; };
-		8843B4BF1CF5C4B8004CF7D0 /* FlikrCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlikrCell.swift; sourceTree = "<group>"; };
 		8843B4C11CF5C4E7004CF7D0 /* FlikrViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlikrViewController.swift; sourceTree = "<group>"; };
 		8843B4C31CF5C8C2004CF7D0 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		8843B4C51CF5D32F004CF7D0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8843B4C71CF5DAC6004CF7D0 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		88F678771CF4036900C00F39 /* Friends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Friends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88F6787A1CF4036900C00F39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88F6787C1CF4036900C00F39 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -123,7 +125,8 @@
 				8843B4B71CF595C8004CF7D0 /* WebViewController.swift */,
 				8843B4C11CF5C4E7004CF7D0 /* FlikrViewController.swift */,
 				8843B4C31CF5C8C2004CF7D0 /* ImageViewController.swift */,
-				8843B4BF1CF5C4B8004CF7D0 /* FlikrCell.swift */,
+				8843B4C51CF5D32F004CF7D0 /* LoginViewController.swift */,
+				8843B4C71CF5DAC6004CF7D0 /* CollectionViewCell.swift */,
 				88F6787E1CF4036900C00F39 /* Main.storyboard */,
 				88F678AC1CF40ADD00C00F39 /* Friend.swift */,
 				88F678AE1CF40AFC00C00F39 /* FriendList.swift */,
@@ -287,7 +290,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8843B4C21CF5C4E7004CF7D0 /* FlikrViewController.swift in Sources */,
-				8843B4C01CF5C4B8004CF7D0 /* FlikrCell.swift in Sources */,
 				88F678A91CF406C200C00F39 /* MasterViewController.swift in Sources */,
 				88F678B51CF5454100C00F39 /* MapViewController.swift in Sources */,
 				88F678AF1CF40AFC00C00F39 /* FriendList.swift in Sources */,
@@ -296,7 +298,9 @@
 				8843B4B81CF595C8004CF7D0 /* WebViewController.swift in Sources */,
 				8843B4BA1CF5A9DF004CF7D0 /* FriendExtension.swift in Sources */,
 				88F6787B1CF4036900C00F39 /* AppDelegate.swift in Sources */,
+				8843B4C81CF5DAC6004CF7D0 /* CollectionViewCell.swift in Sources */,
 				8843B4C41CF5C8C2004CF7D0 /* ImageViewController.swift in Sources */,
+				8843B4C61CF5D32F004CF7D0 /* LoginViewController.swift in Sources */,
 				88F678AD1CF40ADD00C00F39 /* Friend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
