@@ -468,7 +468,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Lc0-5i-AV0" appends="YES" id="otG-VU-54F"/>
                                     <outletCollection property="gestureRecognizers" destination="eHi-M0-Xtz" appends="YES" id="kDG-PN-0Mq"/>
                                     <outletCollection property="gestureRecognizers" destination="uZe-G6-x9v" appends="YES" id="F5j-6l-ahG"/>
                                 </connections>
@@ -483,23 +482,18 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="fsImage" destination="ByW-2C-mfN" id="ZI4-or-wfM"/>
+                        <outlet property="fsImage" destination="ByW-2C-mfN" id="H7v-gu-wW7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NHv-Fu-Aog" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="Lc0-5i-AV0">
-                    <connections>
-                        <action selector="tapped:" destination="YGD-Uz-rmy" id="wLt-9m-9EM"/>
-                    </connections>
-                </tapGestureRecognizer>
                 <swipeGestureRecognizer direction="right" id="eHi-M0-Xtz">
                     <connections>
-                        <action selector="swipeRight:" destination="YGD-Uz-rmy" id="PL8-Oz-D5L"/>
+                        <action selector="rightSwipe:" destination="YGD-Uz-rmy" id="wPb-Ia-vJV"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="left" id="uZe-G6-x9v">
                     <connections>
-                        <action selector="swipeLeft:" destination="YGD-Uz-rmy" id="29q-0i-wKq"/>
+                        <action selector="leftSwipe:" destination="YGD-Uz-rmy" id="gG1-NQ-Rb1"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>

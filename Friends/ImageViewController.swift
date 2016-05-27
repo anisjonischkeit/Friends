@@ -9,19 +9,36 @@
 import UIKit
 
 protocol imageViewControllerDelegate {
-    func getNextImage (dvc : ImageViewController, photoId: Int)
+    func getNextImage (dvc : ImageViewController, nextItem : Bool)
 }
 
 class ImageViewController: UIViewController {
 
+    @IBOutlet weak var fsImage: UIImageView!
+    
     var delegate : imageViewControllerDelegate!
+    var navTitle : String = ""
     var photo : UIImage!
     var photoCount: Int = 0
+    
+    @IBAction func leftSwipe(sender: AnyObject) {
+        delegate.getNextImage(self, nextItem: true)
+        navigationItem.title = navTitle
+        fsImage.image = photo
+    }
+    
+    @IBAction func rightSwipe(sender: AnyObject) {
+        delegate.getNextImage(self, nextItem: false)
+        navigationItem.title = navTitle
+        fsImage.image = photo
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        navigationItem.title = navTitle
+        fsImage.image = photo
         // Do any additional setup after loading the view.
     }
 
