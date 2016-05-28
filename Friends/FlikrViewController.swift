@@ -161,16 +161,18 @@ class FlikrViewController: UICollectionViewController, imageViewControllerDelega
             self.flikrPhotos = photosForUser(self.friend.flikr)
             
             // Downloads all image files into an array
-            for photo in self.flikrPhotos!{
-                let urlName = urlString(photo, format: .Big)
-                if let url = NSURL(string: urlName!) {
-                    if let data = NSData(contentsOfURL: url),
-                        let image = UIImage(data: data) {
-                        let mainQueue = dispatch_get_main_queue()
-                        dispatch_async(mainQueue, {
-                            self.photos.append(image)
-                            self.collectionView?.reloadData()
-                        })
+            if self.flikrPhotos != nil {
+                for photo in self.flikrPhotos!{
+                    let urlName = urlString(photo, format: .Big)
+                    if let url = NSURL(string: urlName!) {
+                        if let data = NSData(contentsOfURL: url),
+                            let image = UIImage(data: data) {
+                            let mainQueue = dispatch_get_main_queue()
+                            dispatch_async(mainQueue, {
+                                self.photos.append(image)
+                                self.collectionView?.reloadData()
+                            })
+                        }
                     }
                 }
             }
