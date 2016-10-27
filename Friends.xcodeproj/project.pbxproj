@@ -45,16 +45,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8843B4B71CF595C8004CF7D0 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
-		8843B4B91CF5A9DF004CF7D0 /* FriendExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendExtension.swift; sourceTree = "<group>"; };
-		8843B4BD1CF5BD16004CF7D0 /* FlickrAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrAPI.swift; sourceTree = "<group>"; };
-		8843B4C11CF5C4E7004CF7D0 /* FlikrViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlikrViewController.swift; sourceTree = "<group>"; };
-		8843B4C31CF5C8C2004CF7D0 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
-		8843B4C51CF5D32F004CF7D0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8843B4B71CF595C8004CF7D0 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebViewController.swift; path = Controllers/WebViewController.swift; sourceTree = "<group>"; };
+		8843B4B91CF5A9DF004CF7D0 /* FriendExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendExtension.swift; path = Models/FriendExtension.swift; sourceTree = "<group>"; };
+		8843B4BD1CF5BD16004CF7D0 /* FlickrAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlickrAPI.swift; path = Models/FlickrAPI.swift; sourceTree = "<group>"; };
+		8843B4C11CF5C4E7004CF7D0 /* FlikrViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlikrViewController.swift; path = Controllers/FlikrViewController.swift; sourceTree = "<group>"; };
+		8843B4C31CF5C8C2004CF7D0 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageViewController.swift; path = Controllers/ImageViewController.swift; sourceTree = "<group>"; };
+		8843B4C51CF5D32F004CF7D0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
 		8843B4C71CF5DAC6004CF7D0 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		88F678771CF4036900C00F39 /* Friends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Friends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88F6787A1CF4036900C00F39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		88F6787C1CF4036900C00F39 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		88F6787C1CF4036900C00F39 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = Controllers/DetailViewController.swift; sourceTree = "<group>"; };
 		88F6787F1CF4036900C00F39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		88F678811CF4036900C00F39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88F678841CF4036900C00F39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -65,10 +65,10 @@
 		88F678961CF4036A00C00F39 /* FriendsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FriendsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		88F6789A1CF4036A00C00F39 /* FriendsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsUITests.swift; sourceTree = "<group>"; };
 		88F6789C1CF4036A00C00F39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		88F678A81CF406C200C00F39 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		88F678AC1CF40ADD00C00F39 /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
-		88F678AE1CF40AFC00C00F39 /* FriendList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendList.swift; sourceTree = "<group>"; };
-		88F678B41CF5454100C00F39 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = ../MapViewController.swift; sourceTree = "<group>"; };
+		88F678A81CF406C200C00F39 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MasterViewController.swift; path = Controllers/MasterViewController.swift; sourceTree = "<group>"; };
+		88F678AC1CF40ADD00C00F39 /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Friend.swift; path = Models/Friend.swift; sourceTree = "<group>"; };
+		88F678AE1CF40AFC00C00F39 /* FriendList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendList.swift; path = Models/FriendList.swift; sourceTree = "<group>"; };
+		88F678B41CF5454100C00F39 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Controllers/MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,22 +119,11 @@
 		88F678791CF4036900C00F39 /* Friends */ = {
 			isa = PBXGroup;
 			children = (
-				88F678A81CF406C200C00F39 /* MasterViewController.swift */,
-				88F6787C1CF4036900C00F39 /* DetailViewController.swift */,
-				88F678B41CF5454100C00F39 /* MapViewController.swift */,
-				8843B4B71CF595C8004CF7D0 /* WebViewController.swift */,
-				8843B4C11CF5C4E7004CF7D0 /* FlikrViewController.swift */,
-				8843B4C31CF5C8C2004CF7D0 /* ImageViewController.swift */,
-				8843B4C51CF5D32F004CF7D0 /* LoginViewController.swift */,
-				8843B4C71CF5DAC6004CF7D0 /* CollectionViewCell.swift */,
-				88F6787E1CF4036900C00F39 /* Main.storyboard */,
-				88F678AC1CF40ADD00C00F39 /* Friend.swift */,
-				88F678AE1CF40AFC00C00F39 /* FriendList.swift */,
-				8843B4B91CF5A9DF004CF7D0 /* FriendExtension.swift */,
+				D88834971DC1E98F00457D60 /* Views */,
+				D88834961DC1E94A00457D60 /* Models */,
+				D88834951DC1E93000457D60 /* Controllers */,
 				88F6787A1CF4036900C00F39 /* AppDelegate.swift */,
-				8843B4BD1CF5BD16004CF7D0 /* FlickrAPI.swift */,
 				88F678811CF4036900C00F39 /* Assets.xcassets */,
-				88F678831CF4036900C00F39 /* LaunchScreen.storyboard */,
 				88F678861CF4036900C00F39 /* Info.plist */,
 			);
 			path = Friends;
@@ -156,6 +145,41 @@
 				88F6789C1CF4036A00C00F39 /* Info.plist */,
 			);
 			path = FriendsUITests;
+			sourceTree = "<group>";
+		};
+		D88834951DC1E93000457D60 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				88F678A81CF406C200C00F39 /* MasterViewController.swift */,
+				88F6787C1CF4036900C00F39 /* DetailViewController.swift */,
+				88F678B41CF5454100C00F39 /* MapViewController.swift */,
+				8843B4B71CF595C8004CF7D0 /* WebViewController.swift */,
+				8843B4C11CF5C4E7004CF7D0 /* FlikrViewController.swift */,
+				8843B4C31CF5C8C2004CF7D0 /* ImageViewController.swift */,
+				8843B4C51CF5D32F004CF7D0 /* LoginViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D88834961DC1E94A00457D60 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8843B4BD1CF5BD16004CF7D0 /* FlickrAPI.swift */,
+				88F678AC1CF40ADD00C00F39 /* Friend.swift */,
+				88F678AE1CF40AFC00C00F39 /* FriendList.swift */,
+				8843B4B91CF5A9DF004CF7D0 /* FriendExtension.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		D88834971DC1E98F00457D60 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8843B4C71CF5DAC6004CF7D0 /* CollectionViewCell.swift */,
+				88F6787E1CF4036900C00F39 /* Main.storyboard */,
+				88F678831CF4036900C00F39 /* LaunchScreen.storyboard */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,6 +250,7 @@
 				TargetAttributes = {
 					88F678761CF4036900C00F39 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 5A37PA9F94;
 					};
 					88F6788A1CF4036A00C00F39 = {
 						CreatedOnToolsVersion = 7.3;
@@ -445,9 +470,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Friends/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = au.edu.griffith.ict.prog.Friends;
+				PRODUCT_BUNDLE_IDENTIFIER = au.edu.griffith.ict.prog.anis.Friends;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -456,9 +482,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Friends/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = au.edu.griffith.ict.prog.Friends;
+				PRODUCT_BUNDLE_IDENTIFIER = au.edu.griffith.ict.prog.anis.Friends;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
